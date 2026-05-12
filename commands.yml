@@ -1,0 +1,12 @@
+context:
+  platform: macOS
+  shell: zsh
+  notes:
+    - Prefer safe, readable commands.
+    - Use common macOS tools where possible.
+
+aliases:
+  open browser: open -a Safari
+  show disk usage: df -h
+  list files here: ls -la
+  show running python processes: ps aux | grep -i python
