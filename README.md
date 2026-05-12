@@ -4,6 +4,10 @@ Everybody has favourite or most used commands. Bash history is not always accura
 
 `aish` is a macOS shell assistant that turns English requests into terminal commands.
 
+## Demo
+
+<video src="demo.mp4" controls width="100%"></video>
+
 Edit `commands.yml` to add your most used commands:
 
 ```yaml
