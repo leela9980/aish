@@ -6,7 +6,7 @@ Everybody has favourite or most used commands. Bash history is not always accura
 
 ## Demo
 
-[![Watch the video](https://github.com/leela9980/aish/blob/main/demo_thumb.png)](https://github.com/leela9980/aish/blob/main/demp.mp4)
+![Alt Text](https://github.com/leela9980/aish/blob/main/demo.gif)
 
 
 Edit `commands.yml` to add your most used commands:
