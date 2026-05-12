@@ -1,6 +1,20 @@
 # aish
 
+Everybody has favourite or most used commands. Bash history is not always accurate in finding previous commands — this will save your time going through a notepad to find the exact command.
+
 `aish` is a macOS shell assistant that turns English requests into terminal commands.
+
+Edit `commands.yml` to add your most used commands:
+
+```yaml
+context:
+  platform: macOS
+  shell: zsh
+
+aliases:
+  list files here: ls -la
+  open browser: open -a Safari
+```
 
 It uses a hybrid resolver:
 - RapidFuzz for high-confidence matches from `commands.yml`
@@ -26,7 +40,7 @@ python3 -m pip install -r requirements.txt
 python3 -m pip install -e .
 ```
 
-## Configure the token
+## Configure the token (AI help)
 
 Set your GitHub Models token before using LLM fallback:
 
@@ -38,19 +52,6 @@ The token must include the `models` permission. If it does not, LLM fallback wil
 
 If you only use phrases that match aliases in `commands.yml`, the token is not needed for those requests.
 
-## Command configuration
-
-Edit `commands.yml` to define aliases and context:
-
-```yaml
-context:
-  platform: macOS
-  shell: zsh
-
-aliases:
-  list files here: ls -la
-  open browser: open -a Safari
-```
 
 ## Show help
 
@@ -93,7 +94,6 @@ Type `exit` or `quit` to leave interactive mode.
 ```bash
 aish --debug "show disk usage"
 aish --dry-run "find large files"
-aish --accept-threshold 92 --ambiguous-threshold 78 "open browser"
 ```
 
 ## Notes
