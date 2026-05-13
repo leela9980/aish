@@ -191,6 +191,9 @@ def render_resolution(request: str, resolution: Resolution, debug: bool) -> None
 
 
 def execute_command(command: str) -> int:
+    console.print(Panel(f"$ {command}", title="Executing", border_style="cyan"))
+    console.print()
+
     process_handle = subprocess.Popen(
         command,
         shell=True,
@@ -205,7 +208,9 @@ def execute_command(command: str) -> int:
     for line in process_handle.stdout:
         console.print(line, end="")
 
-    return process_handle.wait()
+    status = process_handle.wait()
+    console.print()
+    return status
 
 
 def configure_readline() -> None:
